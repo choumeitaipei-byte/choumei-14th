@@ -30,7 +30,8 @@
 
     <script type="text/babel">
     /**
-     * 台北洲美扶輪社 第14屆 報名系統 - 穩定增強版
+     * 台北洲美扶輪社 第14屆 報名系統 - 委員會名單最終校對版
+     * 修正內容：同時保留 歌唱 (Vito) 並新增 歌唱聯誼委員會 (Sunny)
      */
     {
         const { useState } = React;
@@ -92,7 +93,14 @@
                     limitText: '(請最少選擇3個)',
                     icon: 'ClipboardCheck',
                     color: '#9CA9AD',
-                    items: ['出席 (Thomas)', '聯誼 (Elaine)', '節目 (PE Vincent)', '歌唱 (Vito)', '康樂 (PP Calvin)', '社刊/雜誌 (Shining)', '扶輪家庭 (Pan)', '互聯網網路社群 (Amber)', '健康促進 (Fumiko)', '登山 (PP Derek)', '高爾夫球及保齡球隊 (IPP Ethan)', '花藝 (Alice Chen)', '自行車隊 (PP Calvin)', '龍舟隊 (PP Rita)', '社慶特別委員會 (PE Vincent)']
+                    items: [
+                        '出席 (Thomas)', '聯誼 (Elaine)', '節目 (PE Vincent)', 
+                        '歌唱 (Vito)', '歌唱聯誼委員會 (Sunny)', 
+                        '康樂 (PP Calvin)', '社刊/雜誌 (Shining)', '扶輪家庭 (Pan)', 
+                        '互聯網網路社群 (Amber)', '健康促進 (Fumiko)', '登山 (PP Derek)', 
+                        '高爾夫球及保齡球隊 (IPP Ethan)', '花藝 (Alice Chen)', 
+                        '自行車隊 (PP Calvin)', '龍舟隊 (PP Rita)', '社慶特別委員會 (PE Vincent)'
+                    ]
                 },
                 {
                     id: 'membership',
@@ -101,7 +109,7 @@
                     limitText: '(請最少選擇1個)',
                     icon: 'Users',
                     color: '#B9A19D',
-                    items: ['扶輪知識 (PP Maya)', '社員關懷 (PP Ken)', '社員發展 (PP Showcase)', '職業分類 (JC)', '眷屬入社特別委員會 (PP Rita)']
+                    items: ['扶輪知識 (PP Maya)', '社員關懷 (PP Ken)', '社員發展 (PP Showcase)', '職業分類 (JC)', '眷屬特別入社 (Alice Chen)', '防止社員流失委員會 (PP Rita)']
                 },
                 {
                     id: 'service',
@@ -184,7 +192,7 @@
                         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                         body: JSON.stringify({
                             name: formData.name,
-                            committee: "第14屆招募-正式版",
+                            committee: "第14屆招募-正式修正版",
                             subs: finalSubs
                         })
                     });
