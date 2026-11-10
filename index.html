@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 台北雙溪、洲美、基河網路、沐新扶輪社 中秋聯歡晚會</title>
+    <title>2026 台北洲美扶輪社｜12 月活動報名</title>
     <style>
         :root {
-            --primary-dark: #0f172a;    /* 極深藍灰 */
-            --accent-gold: #f59e0b;     /* 溫暖金 */
-            --bg-light: #f8fafc;
+            --pine: #1F4D3A;        /* 深松綠 */
+            --pine-deep: #153728;
+            --red: #B3261E;         /* 聖誕紅 */
+            --gold: #D9A84E;        /* 香檳金 */
+            --gold-light: #F3D99B;
+            --cream: #FBF6EE;       /* 暖奶油 */
             --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-sub: #64748b;
+            --line: #EDE4D3;
+            --text-main: #2B2420;
+            --text-sub: #7A6E62;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            font-family: "PingFang TC", "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-light);
+            font-family: "PingFang TC", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--cream);
             color: var(--text-main);
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-image: radial-gradient(rgba(217, 168, 78, 0.18) 1px, transparent 1px);
+            background-size: 22px 22px;
         }
 
         .container {
@@ -31,51 +37,59 @@
             padding: 20px 16px 40px 16px;
         }
 
-        /* 🌕 中秋圖片大封面 Header */
+        img { max-width: 100%; display: block; }
+
+        /* 🎄 封面 Banner */
         .hero-banner {
             position: relative;
             border-radius: 24px;
-            padding: 45px 25px 35px 25px;
+            padding: 46px 24px 34px 24px;
             color: #ffffff;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+            box-shadow: 0 20px 40px rgba(21, 55, 40, 0.25);
             margin-bottom: 25px;
             overflow: hidden;
-            background: #0f172a url('banner.jpg?v=1') center center / cover no-repeat;
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            background: var(--pine-deep) url('banner.jpg?v=1') center 35% / cover no-repeat;
+            border: 1px solid rgba(217, 168, 78, 0.45);
             text-align: center;
         }
 
         .hero-banner::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.85) 100%);
+            inset: 0;
+            background: linear-gradient(180deg, rgba(21, 55, 40, 0.55) 0%, rgba(21, 55, 40, 0.88) 100%);
             z-index: 1;
         }
 
-        .hero-content {
-            position: relative;
+        /* 燈串 */
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(90deg, var(--red) 0 14px, var(--gold) 14px 28px, var(--pine) 28px 42px);
             z-index: 2;
         }
+
+        .hero-content { position: relative; z-index: 2; }
 
         .hero-tag {
             display: inline-flex;
             align-items: center;
-            background: rgba(245, 158, 11, 0.25);
-            border: 1px solid rgba(245, 158, 11, 0.6);
-            color: #fde047;
+            background: rgba(179, 38, 30, 0.85);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
             padding: 5px 14px;
             border-radius: 100px;
             font-size: 12.5px;
             font-weight: 800;
             letter-spacing: 1px;
             margin-bottom: 14px;
-            backdrop-filter: blur(4px);
         }
 
         .hero-title {
             margin: 0 0 16px 0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
             line-height: 1.4;
             color: #ffffff;
@@ -83,10 +97,11 @@
         }
 
         .hero-title .highlight {
-            color: #fef08a;
+            color: var(--gold-light);
             display: block;
-            font-size: 28px;
+            font-size: 30px;
             margin-top: 4px;
+            letter-spacing: 2px;
         }
 
         .hero-meta {
@@ -95,73 +110,138 @@
             flex-wrap: wrap;
             gap: 8px;
             padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(243, 217, 155, 0.35);
         }
 
         .meta-pill {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(243, 217, 155, 0.4);
             padding: 5px 12px;
             border-radius: 8px;
-            font-size: 12.5px;
+            font-size: 13px;
             color: #ffffff;
-            font-weight: 600;
-            backdrop-filter: blur(4px);
+            font-weight: 700;
+            text-decoration: none;
         }
 
-        /* 🔷 展會感 Section Header */
+        /* 區塊標題 */
         .section-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .section-header .tag-box {
-            background: var(--primary-dark);
-            color: #fef08a;
+            background: var(--pine);
+            color: var(--gold-light);
             font-weight: 900;
-            font-size: 13px;
+            font-size: 12.5px;
             padding: 4px 10px;
             border-radius: 6px;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
+
+        .section-header .tag-box.red { background: var(--red); }
 
         .section-header .title-text {
             font-size: 18px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--pine);
             margin: 0;
         }
 
-        /* 通用卡片 */
+        /* 卡片 */
         .card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 26px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(43, 36, 32, 0.05);
             margin-bottom: 25px;
-            border: 1px solid #f1f5f9;
+            border: 1px solid var(--line);
         }
+
+        .event-card { padding: 0; overflow: hidden; }
+        .event-card .card-body { padding: 24px; }
+
+        .event-cover {
+            position: relative;
+            height: 180px;
+            background: center / cover no-repeat;
+        }
+
+        .event-cover::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(21, 55, 40, 0.85) 100%);
+        }
+
+        .event-cover .cover-text {
+            position: absolute;
+            left: 20px; right: 20px; bottom: 14px;
+            z-index: 1;
+            color: #fff;
+        }
+
+        .cover-no {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--pine-deep);
+            font-weight: 900;
+            font-size: 12px;
+            padding: 2px 10px;
+            border-radius: 100px;
+            letter-spacing: 1px;
+        }
+
+        .cover-title {
+            margin: 6px 0 0 0;
+            font-size: 21px;
+            font-weight: 900;
+            line-height: 1.35;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .stat {
+            background: #F4F8F5;
+            border-top: 3px solid var(--gold);
+            border-radius: 10px;
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        .stat .num { font-size: 14px; white-space: nowrap; font-weight: 900; color: var(--pine); line-height: 1.3; }
+        .stat .cap { font-size: 11.5px; color: var(--text-sub); font-weight: 600; }
 
         .info-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 18px;
         }
 
         .info-item {
-            background: #f8fafc;
-            border-left: 4px solid var(--primary-dark);
-            padding: 14px 16px;
+            background: #FAF7F1;
+            border-left: 4px solid var(--pine);
+            padding: 12px 16px;
             border-radius: 0 12px 12px 0;
         }
+
+        .info-item.red { border-left-color: var(--red); }
 
         .info-item .label {
             font-size: 11.5px;
             font-weight: 800;
             color: var(--text-sub);
-            text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 2px;
         }
@@ -169,32 +249,142 @@
         .info-item .value {
             font-size: 15.5px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--pine);
         }
 
+        .info-item .sub { font-size: 13px; color: var(--text-sub); margin-top: 2px; }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        /* 路線 */
+        .route-wrap {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .route-map {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            cursor: zoom-in;
+        }
+
+        .route-map img { width: 100%; height: 100%; object-fit: cover; }
+
+        .route-list { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 3px solid var(--gold); }
+        .route-list li { margin-bottom: 9px; }
+        .route-list li:last-child { margin-bottom: 0; }
+        .route-list .stop { font-weight: 800; color: var(--pine); font-size: 14px; }
+        .route-list .stop span { color: var(--gold); margin-right: 4px; }
+        .route-list .desc { font-size: 12.5px; color: var(--text-sub); }
+
+        /* 景點照 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .photo-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .photo-card img { width: 100%; height: 100px; object-fit: cover; }
+        .photo-card .p-text { padding: 7px 10px; }
+        .photo-card .p-name { font-weight: 800; font-size: 13.5px; color: var(--pine); }
+        .photo-card .p-desc { font-size: 11.5px; color: var(--text-sub); }
+
+        /* 時間軸 */
+        .timeline-list { list-style: none; padding: 0; margin: 0 0 18px 0; }
+        .timeline-item { display: flex; gap: 12px; padding: 9px 0; border-bottom: 1px solid #F3EDE2; }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-time {
+            font-weight: 900;
+            color: var(--red);
+            font-size: 12.5px;
+            min-width: 92px;
+            background: #FBEDEB;
+            padding: 3px 6px;
+            border-radius: 6px;
+            text-align: center;
+            height: fit-content;
+        }
+        .timeline-desc { font-size: 13.5px; font-weight: 600; color: var(--text-main); align-self: center; }
+        .timeline-desc small { display: block; font-weight: 500; color: var(--text-sub); font-size: 12px; }
+
+        .notice {
+            background: #FFF8E8;
+            border: 1px dashed var(--gold);
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-size: 13px;
+            color: #5C4A2A;
+        }
+
+        .notice strong { color: var(--red); }
+
+        /* 費用 */
         .price-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin-top: 10px;
+            margin-bottom: 14px;
         }
 
         .price-card {
             background: #ffffff;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid var(--line);
             padding: 12px;
             border-radius: 12px;
         }
 
+        .price-card.hl { border-color: var(--pine); background: #F4F8F5; }
         .price-card .title { font-size: 13px; font-weight: 700; color: var(--text-sub); }
-        .price-card .price { font-size: 16px; font-weight: 900; color: var(--primary-dark); margin-top: 2px; }
+        .price-card .price { font-size: 18px; font-weight: 900; color: var(--pine); margin-top: 2px; }
+        .price-card .price.red { color: var(--red); }
+        .price-card .note { font-size: 11px; color: #A39684; margin-top: 2px; }
+
+        .poster-thumb {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            cursor: zoom-in;
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .poster-thumb img { width: 100%; max-height: 360px; object-fit: cover; object-position: top; }
+
+        .poster-thumb .zoom-tip {
+            position: absolute;
+            right: 10px; bottom: 10px;
+            background: rgba(21, 55, 40, 0.85);
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 100px;
+        }
 
         .trans-btn {
-            background: var(--primary-dark);
+            background: var(--pine);
             color: #ffffff;
             border: none;
             width: 100%;
-            padding: 14px 18px;
+            padding: 13px 18px;
             border-radius: 12px;
             font-size: 14px;
             font-weight: 700;
@@ -202,413 +392,652 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 15px;
+            margin-top: 14px;
+            font-family: inherit;
         }
 
         .trans-box {
             display: none;
-            padding: 16px;
-            background: #f8fafc;
-            border: 1px dashed #cbd5e1;
+            padding: 14px 16px;
+            background: #FAF7F1;
+            border: 1px dashed #D8CDB8;
             border-radius: 12px;
             margin-top: 10px;
             font-size: 13.5px;
-            color: #334155;
-            line-height: 1.6;
+            color: #4A4037;
         }
-
-        /* ⏱️ 時間軸 */
-        .timeline-list { list-style: none; padding: 0; margin: 0; }
-        .timeline-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
-        .timeline-item:last-child { border-bottom: none; }
-        .timeline-time {
-            font-weight: 900;
-            color: #d97706;
-            font-size: 13.5px;
-            min-width: 100px;
-            background: #fffbe8;
-            padding: 4px 8px;
-            border-radius: 6px;
-            text-align: center;
-            height: fit-content;
-        }
-        .timeline-desc { font-size: 14px; font-weight: 600; color: var(--text-main); align-self: center; }
 
         /* 表單 */
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: 800; margin-bottom: 8px; color: var(--primary-dark); font-size: 14.5px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group > label, .group-label { display: block; font-weight: 800; margin-bottom: 8px; color: var(--pine); font-size: 14.5px; }
         .form-control {
             width: 100%;
-            padding: 13px 15px;
-            border: 1.5px solid #e2e8f0;
+            padding: 12px 14px;
+            border: 1.5px solid var(--line);
             border-radius: 12px;
-            box-sizing: border-box;
             font-size: 15px;
-            background-color: #f8fafc;
+            background-color: #FDFBF7;
+            font-family: inherit;
+            color: var(--text-main);
         }
         .form-control:focus {
-            border-color: var(--primary-dark);
+            border-color: var(--pine);
             background-color: #ffffff;
             outline: none;
         }
 
-        .radio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .radio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .radio-btn {
-            border: 1.5px solid #e2e8f0;
-            padding: 13px;
+            border: 1.5px solid var(--line);
+            padding: 12px;
             border-radius: 12px;
             text-align: center;
             cursor: pointer;
             font-weight: 800;
-            background: #f8fafc;
+            background: #FDFBF7;
             color: var(--text-sub);
+            font-size: 14px;
         }
         .radio-btn input { display: none; }
         .radio-btn:has(input[type="radio"]:checked) {
-            border-color: var(--primary-dark);
-            background-color: var(--primary-dark);
-            color: #fef08a;
+            border-color: var(--pine);
+            background-color: var(--pine);
+            color: var(--gold-light);
         }
         .radio-btn:has(input[value="請假"]:checked) {
-            border-color: #64748b;
-            background-color: #475569;
+            border-color: #8A8178;
+            background-color: #6F675F;
             color: #ffffff;
         }
 
-        .dynamic-box {
-            background: #f8fafc;
-            border: 1.5px dashed #cbd5e1;
+        .event-block {
+            border: 1.5px solid var(--line);
+            border-radius: 16px;
             padding: 16px;
+            margin-bottom: 18px;
+            background: #FFFDF9;
+        }
+
+        .event-block.xmas { border-top: 4px solid var(--red); }
+        .event-block.bike { border-top: 4px solid var(--pine); }
+
+        .event-block-title {
+            font-weight: 900;
+            font-size: 15.5px;
+            color: var(--pine);
+            margin-bottom: 12px;
+        }
+
+        .event-block-title small { display: block; font-size: 12px; color: var(--text-sub); font-weight: 600; }
+
+        .details { margin-top: 14px; }
+        .details .form-group:last-child { margin-bottom: 0; }
+
+        .dynamic-box {
+            background: #FAF7F1;
+            border: 1.5px dashed #D8CDB8;
+            padding: 14px;
             border-radius: 14px;
-            margin-top: 12px;
+            margin-top: 10px;
             display: none;
         }
-        .dynamic-item { margin-bottom: 12px; }
+        .dynamic-item { margin-bottom: 10px; }
         .dynamic-item:last-child { margin-bottom: 0; }
-        .dynamic-item label { font-size: 13px; color: var(--text-sub); margin-bottom: 4px; }
+        .dynamic-item label { display: block; font-size: 13px; color: var(--text-sub); margin-bottom: 4px; font-weight: 700; }
+
+        .fee-box {
+            margin-top: 14px;
+            background: var(--pine);
+            color: #fff;
+            border-radius: 14px;
+            padding: 14px 16px;
+        }
+
+        .fee-box .fee-lines { font-size: 13px; color: #D7E5DC; }
+        .fee-box .fee-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-top: 1px solid rgba(243, 217, 155, 0.35);
+            margin-top: 8px;
+            padding-top: 8px;
+            font-weight: 800;
+        }
+        .fee-box .fee-total .amt { font-size: 22px; font-weight: 900; color: var(--gold-light); }
 
         .btn-submit {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #1e293b 100%);
-            color: #fef08a;
-            border: 1px solid #fef08a;
+            background: linear-gradient(135deg, var(--red) 0%, #8E1C16 100%);
+            color: #FFF4DC;
+            border: 1px solid var(--gold);
             width: 100%;
-            padding: 17px;
+            padding: 16px;
             font-size: 17px;
             font-weight: 900;
             border-radius: 14px;
             cursor: pointer;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
-            margin-top: 10px;
+            box-shadow: 0 10px 25px rgba(179, 38, 30, 0.25);
+            margin-top: 6px;
+            font-family: inherit;
+            letter-spacing: 1px;
         }
+        .btn-submit:disabled { opacity: 0.6; cursor: wait; }
 
-        #hidden_iframe { display: none; }
+        .footer-note { text-align: center; font-size: 12px; color: var(--text-sub); margin-top: 10px; }
+
+        /* 放大檢視 */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 20, 15, 0.92);
+            z-index: 100;
+            padding: 20px;
+            overflow: auto;
+            cursor: zoom-out;
+        }
+        .lightbox img { margin: 0 auto; max-width: 100%; border-radius: 10px; }
+        .lightbox .close-tip { color: #fff; text-align: center; font-size: 13px; margin-bottom: 10px; }
+
+        #sendFrames { display: none; }
+
+        @media (max-width: 400px) {
+            .route-wrap { grid-template-columns: 96px 1fr; }
+            .stat .num { font-size: 12.5px; }
+            .hero-title .highlight { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    
-    <!-- 🌕 中秋圖片大封面 Header -->
+
+    <!-- 🎄 封面 -->
     <div class="hero-banner">
         <div class="hero-content">
-            <div class="hero-tag">🥮 2026 MID-AUTUMN CELEBRATION</div>
+            <div class="hero-tag">🎄 DECEMBER EVENTS 2026</div>
             <h1 class="hero-title">
-                台北雙溪、洲美、基河網路、沐新扶輪社
-                <span class="highlight">中秋聯歡晚會</span>
+                台北洲美扶輪社
+                <span class="highlight">12 月活動報名</span>
             </h1>
             <div class="hero-meta">
-                <span class="meta-pill">四社聯合例會</span>
-                <span class="meta-pill">烤肉饗宴</span>
-                <span class="meta-pill">團康遊戲與抽獎</span>
+                <a class="meta-pill" href="#bike">🚲 12/06 河濱單車日</a>
+                <a class="meta-pill" href="#xmas">🎄 12/19 聖誕聯歡</a>
             </div>
         </div>
     </div>
 
-    <!-- 📍 活動資訊 -->
-    <div class="card">
-        <div class="section-header">
-            <span class="tag-box">INFO</span>
-            <h2 class="title-text">活動時間與地點</h2>
-        </div>
-
-        <div class="info-grid">
-            <div class="info-item">
-                <div class="label">DATE & TIME</div>
-                <div class="value">2026 年 09 月 19 日 (星期六) 17:30 報到</div>
-            </div>
-            <div class="info-item">
-                <div class="label">LOCATION</div>
-                <div class="value">青青食尚花園會館</div>
-                <div style="font-size: 13px; color: var(--text-sub); margin-top: 2px;">臺北市士林區臨溪里至善路二段266巷32號</div>
-            </div>
-            <div class="info-item">
-                <div class="label">DRESS CODE</div>
-                <div class="value" style="font-size: 15px;">夏威夷風、海灘風 🌺🌴</div>
+    <!-- ① 12/06 單車 -->
+    <div class="card event-card" id="bike">
+        <div class="event-cover" style="background-image: url('bike-cover.jpg?v=1');">
+            <div class="cover-text">
+                <span class="cover-no">01 · 12/06（日）</span>
+                <h2 class="cover-title">大稻埕至碧潭 沿河悠遊單車</h2>
             </div>
         </div>
+        <div class="card-body">
+            <div class="stat-row">
+                <div class="stat"><div class="num">20.4 km</div><div class="cap">全平路河濱車道</div></div>
+                <div class="stat"><div class="num">09:15–11:45</div><div class="cap">悠閒騎行與停留</div></div>
+                <div class="stat"><div class="num">12:00–14:00</div><div class="cap">碧潭慶功午餐</div></div>
+            </div>
 
-        <div class="section-header" style="margin-top: 25px;">
-            <span class="tag-box">FEE</span>
-            <h2 class="title-text">費用說明</h2>
-        </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="label">集合 MEET UP</div>
+                    <div class="value">2026 年 12 月 06 日（星期日）09:00</div>
+                    <div class="sub">大稻埕廣場集合｜09:15 準時出發</div>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E7%A8%BB%E5%9F%95%E7%A2%BC%E9%A0%AD" target="_blank" rel="noopener">📍 開啟 Google 地圖</a>
+                </div>
+                <div class="info-item">
+                    <div class="label">終點與午餐 FINISH</div>
+                    <div class="value">碧潭大廚上菜餐廳</div>
+                    <div class="sub">新北市新店區環河路 29 巷 23 號</div>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E5%BA%97%E5%8D%80%E7%92%B0%E6%B2%B3%E8%B7%AF29%E5%B7%B723%E8%99%9F" target="_blank" rel="noopener">📍 開啟 Google 地圖</a>
+                </div>
+                <div class="info-item red">
+                    <div class="label">費用 FEE</div>
+                    <div class="value">活動全程自費</div>
+                    <div class="sub">含租車、午餐等費用，現場各自支付</div>
+                </div>
+            </div>
 
-        <div class="price-grid">
-            <div class="price-card">
-                <div class="title">洲美社友 / 寶尊眷</div>
-                <div class="price">1,000 元/人</div>
-                <div style="font-size:11px; color:#94a3b8; margin-top:2px;">(原價1,500，社內補助500)</div>
+            <div class="section-header">
+                <span class="tag-box">ROUTE</span>
+                <h3 class="title-text">騎乘路線｜從大稻埕一路向南</h3>
             </div>
-            <div class="price-card">
-                <div class="title">來賓 / 友社社友</div>
-                <div class="price">1,500 元/人</div>
+            <div class="route-wrap">
+                <div class="route-map" onclick="openLightbox('bike-map.jpg?v=1')">
+                    <img src="bike-map.jpg?v=1" alt="大稻埕至碧潭騎乘路線圖" loading="lazy">
+                </div>
+                <ol class="route-list">
+                    <li><div class="stop"><span>01</span>大稻埕廣場</div><div class="desc">集合、租車、行前說明與合照</div></li>
+                    <li><div class="stop"><span>02</span>馬場町紀念公園</div><div class="desc">河濱綠地休息、補水與拍照</div></li>
+                    <li><div class="stop"><span>03</span>川端橋與古亭河濱公園</div><div class="desc">欣賞日治時期古蹟橋體</div></li>
+                    <li><div class="stop"><span>04</span>陽光橋／陽光運動公園</div><div class="desc">白色琴鋼索斜張橋打卡</div></li>
+                    <li><div class="stop"><span>05</span>微樂山丘</div><div class="desc">自行車躍動體驗廣場</div></li>
+                    <li><div class="stop"><span>06</span>碧潭風景區</div><div class="desc">還車、欣賞吊橋與水岸風光</div></li>
+                </ol>
             </div>
-            <div class="price-card">
-                <div class="title">小扶輪 (100cm以下)</div>
-                <div class="price">免費</div>
-            </div>
-            <div class="price-card">
-                <div class="title">小扶輪 (100-130cm)</div>
-                <div class="price">300 元/人</div>
-                <div style="font-size:11px; color:#94a3b8; margin-top:2px;">(原價800，社內補助500)</div>
-            </div>
-        </div>
-        <div style="font-size: 12px; color: #94a3b8; margin-top: 8px;">* 小扶輪 130 公分以上視同寶眷收費 (1,000元)。</div>
 
-        <button class="trans-btn" type="button" onclick="toggleTransportInfo()">
-            <span>🚘 點此查看交通資訊與停車指引</span>
-            <span id="transArrow">▼</span>
-        </button>
-        <div class="trans-box" id="transContent">
-            <strong>【搭乘捷運 / 公車】</strong><br>
-            • 捷運士林站 1 號出口，轉搭公車 <strong>255 / 304 / 小18 / 小19 / 紅30</strong> 至「故宮博物院站」或「北安國中站」下車，步行約 3-5 分鐘即可抵達。<br><br>
-            <strong>【自行開車】</strong><br>
-            • 國道一號由士林交流道下，直行重慶北路過百齡橋，左轉中正路直行至至善路右轉，直行至至善路二段266巷右轉即可抵達。<br>
-            • 會館專屬停車場免費提供貴賓停車。
+            <div class="photo-grid">
+                <div class="photo-card"><img src="bike-1.jpg?v=1" alt="大稻埕碼頭" loading="lazy"><div class="p-text"><div class="p-name">大稻埕碼頭</div><div class="p-desc">集合出發</div></div></div>
+                <div class="photo-card"><img src="bike-2.jpg?v=1" alt="馬場町" loading="lazy"><div class="p-text"><div class="p-name">馬場町</div><div class="p-desc">河濱休息</div></div></div>
+                <div class="photo-card"><img src="bike-3.jpg?v=1" alt="陽光橋" loading="lazy"><div class="p-text"><div class="p-name">陽光橋</div><div class="p-desc">人氣打卡點</div></div></div>
+                <div class="photo-card"><img src="bike-4.jpg?v=1" alt="碧潭吊橋" loading="lazy"><div class="p-text"><div class="p-name">碧潭吊橋</div><div class="p-desc">終點風景</div></div></div>
+            </div>
+
+            <div class="section-header">
+                <span class="tag-box">AGENDA</span>
+                <h3 class="title-text">完整行程｜09:00–14:00</h3>
+            </div>
+            <ul class="timeline-list">
+                <li class="timeline-item"><div class="timeline-time">09:00–09:15</div><div class="timeline-desc">集合報到與行前說明<small>大稻埕廣場：租車、準備、合照出發</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">09:15–09:55</div><div class="timeline-desc">輕鬆騎行（約 8 km）<small>沿淡水河與新店溪河濱自行車道</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">09:55–10:15</div><div class="timeline-desc">休息與拍照<small>馬場町紀念公園：綠地、廁所與飲水機</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">10:15–10:25</div><div class="timeline-desc">輕鬆騎行（約 2 km）<small>途經古亭河濱公園</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">10:25–10:40</div><div class="timeline-desc">歷史地標打卡<small>川端橋（中正橋舊址段）：日治時期古蹟橋體</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">10:40–11:15</div><div class="timeline-desc">輕鬆騎行（約 7 km）<small>沿新店溪水岸順騎</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">11:15–11:25</div><div class="timeline-desc">休息與拍照<small>陽光橋／陽光運動公園</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">11:25–11:45</div><div class="timeline-desc">最後騎行（約 3.4 km）<small>經微樂山丘自行車躍動體驗廣場抵達碧潭</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">11:45–12:00</div><div class="timeline-desc">還車與整理<small>碧潭東岸還車，步行前往餐廳</small></div></li>
+                <li class="timeline-item"><div class="timeline-time">12:00–14:00</div><div class="timeline-desc">慶功午餐與交流<small>碧潭大廚上菜餐廳，遠眺碧潭美景</small></div></li>
+            </ul>
+
+            <div class="notice">
+                <strong>🚲 出發前提醒</strong><br>
+                可自備自行車或租借 YouBike；請穿著輕便運動服與平底鞋，攜帶水壺、防曬用品或保暖外衣。平均時速約 10–12 km/h，悠閒慢騎。
+            </div>
         </div>
     </div>
 
-    <!-- ⏱️ 活動流程 -->
-    <div class="card">
-        <div class="section-header">
-            <span class="tag-box">AGENDA</span>
-            <h2 class="title-text">晚會活動流程表</h2>
+    <!-- ② 12/19 聖誕 -->
+    <div class="card event-card" id="xmas">
+        <div class="event-cover" style="background-image: url('banner.jpg?v=1'); background-position: center 40%;">
+            <div class="cover-text">
+                <span class="cover-no">02 · 12/19（六）</span>
+                <h2 class="cover-title">🎄 聖誕節聯歡活動</h2>
+            </div>
         </div>
+        <div class="card-body">
+            <div class="info-grid">
+                <div class="info-item red">
+                    <div class="label">時間 DATE & TIME</div>
+                    <div class="value">2026 年 12 月 19 日（星期六）18:00</div>
+                </div>
+                <div class="info-item red">
+                    <div class="label">地點 LOCATION</div>
+                    <div class="value">丸滿台灣味手路菜餐廳</div>
+                    <div class="sub">台北市中山區林森北路 353 巷 21 號</div>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E6%BB%BF%E5%8F%B0%E7%81%A3%E5%91%B3%E6%89%8B%E8%B7%AF%E8%8F%9C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%9E%97%E6%A3%AE%E5%8C%97%E8%B7%AF353%E5%B7%B721%E8%99%9F" target="_blank" rel="noopener">📍 開啟 Google 地圖</a>
+                </div>
+            </div>
 
-        <ul class="timeline-list">
-            <li class="timeline-item">
-                <div class="timeline-time">17:30 - 18:00</div>
-                <div class="timeline-desc">註冊聯誼暨烤肉桌次與團康分組</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-time">18:00 - 18:15</div>
-                <div class="timeline-desc">四社聯合例會 (精簡高效進行)</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-time">18:15 - 19:30</div>
-                <div class="timeline-desc">中秋烤肉饗宴正式開動</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-time">19:30 - 20:50</div>
-                <div class="timeline-desc">秋節聯歡團康遊戲 (啤酒大賽、尖叫雞、亂點鴛鴦譜)</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-time">20:50 - 21:00</div>
-                <div class="timeline-desc">賦歸與夜間代叫車配車導引</div>
-            </li>
-        </ul>
+            <div class="section-header">
+                <span class="tag-box red">FEE</span>
+                <h3 class="title-text">費用說明</h3>
+            </div>
+            <div class="price-grid">
+                <div class="price-card hl">
+                    <div class="title">社友／寶尊眷／小扶輪</div>
+                    <div class="price">580 元/人</div>
+                    <div class="note">（原價 1,180，社內補助 600）</div>
+                </div>
+                <div class="price-card">
+                    <div class="title">來賓／友社社友</div>
+                    <div class="price red">1,180 元/人</div>
+                    <div class="note">（全額）</div>
+                </div>
+            </div>
+
+            <div class="notice" style="margin-bottom: 14px;">
+                <strong>🎁 溫馨提醒</strong><br>
+                當天請準備<strong>摸彩禮物</strong>與<strong>小點心</strong>，一起分享聖誕好心情！
+            </div>
+
+            <div class="poster-thumb" onclick="openLightbox('xmas-poster.jpg?v=1')">
+                <img src="xmas-poster.jpg?v=1" alt="聖誕節聯歡活動海報" loading="lazy">
+                <span class="zoom-tip">🔍 點擊看完整海報</span>
+            </div>
+
+            <button class="trans-btn" type="button" onclick="toggleTransportInfo()">
+                <span>🚇 點此查看交通資訊</span>
+                <span id="transArrow">▼</span>
+            </button>
+            <div class="trans-box" id="transContent">
+                <strong>【位置】</strong><br>
+                • 林森北路與民生東路口附近巷弄內（林森北路 353 巷）。<br><br>
+                <strong>【大眾運輸】</strong><br>
+                • 鄰近捷運中山國小站，建議使用上方「開啟 Google 地圖」導航步行前往。<br><br>
+                <strong>【自行開車】</strong><br>
+                • 餐廳<strong>無附設停車場</strong>，請利用周邊收費停車場，或建議搭乘計程車／大眾運輸前往。
+            </div>
+        </div>
     </div>
 
     <!-- ✍️ 報名表單 -->
-    <div class="card">
+    <div class="card" id="formCard">
         <div class="section-header">
             <span class="tag-box">FORM</span>
             <h2 class="title-text">出席回覆與報名表單</h2>
         </div>
 
-        <form id="moonFestivalForm" action="https://script.google.com/macros/s/AKfycbzIROJRbnPFcqWam0aclRHGhNG5TtGhsrsFu03UMVo1MgZi_crYawv5DD3wJMdU5LR9jg/exec" method="GET" target="hidden_iframe" onsubmit="showSuccessAlert(event)">
-            
-            <input type="hidden" name="events" value="2026四社中秋聯歡晚會">
+        <form id="decForm" onsubmit="submitForm(event)">
 
-            <!-- 1. 社友出席狀態 -->
+            <!-- 社友基本資料 -->
             <div class="form-group">
-                <label>1. 社友出席狀態 (必填)</label>
+                <label for="rotaryName">洲美社友姓名（必填）</label>
+                <input type="text" id="rotaryName" class="form-control" placeholder="請填寫社友姓名" required>
+            </div>
+            <div class="form-group">
+                <label for="nickname">社友 Nickname（必填）</label>
+                <input type="text" id="nickname" class="form-control" placeholder="例如：Jerry" required>
+            </div>
+
+            <!-- ① 單車 -->
+            <div class="event-block bike">
+                <div class="event-block-title">🚲 ① 12/06（日）沿河悠遊單車<small>09:00 大稻埕廣場集合｜全程自費</small></div>
                 <div class="radio-grid">
-                    <label class="radio-btn">
-                        <input type="radio" name="attendStatus" value="出席" onchange="toggleAttendForm(true)" required checked>
-                        <span>🙋‍♂️ 出席</span>
-                    </label>
-                    <label class="radio-btn">
-                        <input type="radio" name="attendStatus" value="請假" onchange="toggleAttendForm(false)">
-                        <span>❌ 請假</span>
-                    </label>
+                    <label class="radio-btn"><input type="radio" name="b_status" value="出席" onchange="toggleDetails('b')" required><span>🙋 出席</span></label>
+                    <label class="radio-btn"><input type="radio" name="b_status" value="請假" onchange="toggleDetails('b')"><span>❌ 請假</span></label>
                 </div>
-            </div>
-
-            <!-- 2. 社友姓名與 Nickname -->
-            <div class="form-group">
-                <label for="rotaryName">2. 洲美社友姓名 (必填)</label>
-                <input type="text" id="rotaryName" name="rotaryName" class="form-control" placeholder="請填寫社友姓名" required>
-            </div>
-
-            <div class="form-group">
-                <label for="nickname">社友 Nickname (必填)</label>
-                <input type="text" id="nickname" name="nickname" class="form-control" placeholder="例如：Jerry" required>
-            </div>
-
-            <!-- 出席詳細區塊 -->
-            <div id="attendDetailsBox">
-                <!-- 3. 寶尊眷報名 -->
-                <div class="form-group">
-                    <label>3. 寶尊眷是否報名？</label>
-                    <div class="radio-grid">
-                        <label class="radio-btn">
-                            <input type="radio" name="hasSpouse" value="yes" onchange="toggleSpouseInput(true)">
-                            <span>是，寶尊眷參加</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="hasSpouse" value="no" onchange="toggleSpouseInput(false)" checked>
-                            <span>否</span>
-                        </label>
+                <div class="details" id="b_details" style="display:none;">
+                    <div class="form-group">
+                        <span class="group-label">自行車安排</span>
+                        <div class="radio-grid">
+                            <label class="radio-btn"><input type="radio" name="b_bike" value="自備單車"><span>自備單車</span></label>
+                            <label class="radio-btn"><input type="radio" name="b_bike" value="租借YouBike" checked><span>租借 YouBike</span></label>
+                        </div>
                     </div>
-                    <div id="spouseBox" class="dynamic-box">
-                        <label for="spouseName">寶尊眷姓名：</label>
-                        <input type="text" id="spouseName" name="spouseName" class="form-control" placeholder="請填寫寶尊眷姓名">
+                    <div class="form-group">
+                        <span class="group-label">寶尊眷是否參加？</span>
+                        <div class="radio-grid">
+                            <label class="radio-btn"><input type="radio" name="b_hasSpouse" value="yes" onchange="toggleSpouse('b')"><span>是，寶尊眷參加</span></label>
+                            <label class="radio-btn"><input type="radio" name="b_hasSpouse" value="no" onchange="toggleSpouse('b')" checked><span>否</span></label>
+                        </div>
+                        <div id="b_spouseBox" class="dynamic-box">
+                            <div class="dynamic-item"><label for="b_spouseName">寶尊眷姓名：</label><input type="text" id="b_spouseName" class="form-control" placeholder="請填寫寶尊眷姓名"></div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- 4. 小扶輪報名 -->
-                <div class="form-group">
-                    <label for="kidCount">4. 小扶輪是否報名？(請選擇人數)</label>
-                    <select id="kidCount" name="kidCount" class="form-control" onchange="generateKidFields()">
-                        <option value="0">無小扶輪參加</option>
-                        <option value="1">1 位</option>
-                        <option value="2">2 位</option>
-                        <option value="3">3 位</option>
-                        <option value="4">4 位</option>
-                    </select>
-                    <div id="kidsContainer" class="dynamic-box"></div>
-                </div>
-
-                <!-- 5. 邀請來賓 -->
-                <div class="form-group">
-                    <label for="guestCount">5. 是否邀請來賓/友社社友？(請選擇人數)</label>
-                    <select id="guestCount" name="guestCount" class="form-control" onchange="generateGuestFields()">
-                        <option value="0">無邀請來賓</option>
-                        <option value="1">1 位</option>
-                        <option value="2">2 位</option>
-                        <option value="3">3 位</option>
-                        <option value="4">4 位</option>
-                        <option value="5">5 位</option>
-                    </select>
-                    <div id="guestsContainer" class="dynamic-box"></div>
-                </div>
-
-                <!-- 6. 飲食習慣 -->
-                <div class="form-group">
-                    <label>6. 飲食習慣</label>
-                    <div class="radio-grid">
-                        <label class="radio-btn">
-                            <input type="radio" name="diet" value="葷食" checked>
-                            <span>葷食</span>
-                        </label>
-                        <label class="radio-btn">
-                            <input type="radio" name="diet" value="素食">
-                            <span>素食</span>
-                        </label>
+                    <div class="form-group">
+                        <label for="b_kidCount">小扶輪是否參加？</label>
+                        <select id="b_kidCount" class="form-control" onchange="genFields('b','kid')">
+                            <option value="0">無小扶輪參加</option>
+                            <option value="1">1 位</option><option value="2">2 位</option><option value="3">3 位</option><option value="4">4 位</option>
+                        </select>
+                        <div id="b_kidBox" class="dynamic-box"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b_guestCount">是否邀請來賓／友社社友？</label>
+                        <select id="b_guestCount" class="form-control" onchange="genFields('b','guest')">
+                            <option value="0">無邀請來賓</option>
+                            <option value="1">1 位</option><option value="2">2 位</option><option value="3">3 位</option><option value="4">4 位</option><option value="5">5 位</option>
+                        </select>
+                        <div id="b_guestBox" class="dynamic-box"></div>
+                    </div>
+                    <div class="form-group">
+                        <span class="group-label">午餐飲食習慣</span>
+                        <div class="radio-grid">
+                            <label class="radio-btn"><input type="radio" name="b_diet" value="葷食" checked><span>葷食</span></label>
+                            <label class="radio-btn"><input type="radio" name="b_diet" value="素食"><span>素食</span></label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 備註說明 -->
-            <div class="form-group">
-                <label for="note">備註說明 (選填)</label>
-                <textarea id="note" name="note" class="form-control" rows="2" placeholder="如有請假原因、小扶輪身高說明或特殊飲食需求請在此註記"></textarea>
+            <!-- ② 聖誕 -->
+            <div class="event-block xmas">
+                <div class="event-block-title">🎄 ② 12/19（六）聖誕節聯歡活動<small>18:00 丸滿台灣味手路菜餐廳</small></div>
+                <div class="radio-grid">
+                    <label class="radio-btn"><input type="radio" name="x_status" value="出席" onchange="toggleDetails('x')" required><span>🙋 出席</span></label>
+                    <label class="radio-btn"><input type="radio" name="x_status" value="請假" onchange="toggleDetails('x')"><span>❌ 請假</span></label>
+                </div>
+                <div class="details" id="x_details" style="display:none;">
+                    <div class="form-group">
+                        <span class="group-label">寶尊眷是否報名？（580 元/人）</span>
+                        <div class="radio-grid">
+                            <label class="radio-btn"><input type="radio" name="x_hasSpouse" value="yes" onchange="toggleSpouse('x')"><span>是，寶尊眷參加</span></label>
+                            <label class="radio-btn"><input type="radio" name="x_hasSpouse" value="no" onchange="toggleSpouse('x')" checked><span>否</span></label>
+                        </div>
+                        <div id="x_spouseBox" class="dynamic-box">
+                            <div class="dynamic-item"><label for="x_spouseName">寶尊眷姓名：</label><input type="text" id="x_spouseName" class="form-control" placeholder="請填寫寶尊眷姓名"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="x_kidCount">小扶輪是否報名？</label>
+                        <select id="x_kidCount" class="form-control" onchange="genFields('x','kid')">
+                            <option value="0">無小扶輪參加</option>
+                            <option value="1">1 位（580 元/人）</option><option value="2">2 位（580 元/人）</option><option value="3">3 位（580 元/人）</option><option value="4">4 位（580 元/人）</option>
+                        </select>
+                        <div id="x_kidBox" class="dynamic-box"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="x_guestCount">是否邀請來賓／友社社友？</label>
+                        <select id="x_guestCount" class="form-control" onchange="genFields('x','guest')">
+                            <option value="0">無邀請來賓</option>
+                            <option value="1">1 位（1,180 元/人）</option><option value="2">2 位（1,180 元/人）</option><option value="3">3 位（1,180 元/人）</option><option value="4">4 位（1,180 元/人）</option><option value="5">5 位（1,180 元/人）</option>
+                        </select>
+                        <div id="x_guestBox" class="dynamic-box"></div>
+                    </div>
+                    <div class="form-group">
+                        <span class="group-label">飲食習慣</span>
+                        <div class="radio-grid">
+                            <label class="radio-btn"><input type="radio" name="x_diet" value="葷食" checked><span>葷食</span></label>
+                            <label class="radio-btn"><input type="radio" name="x_diet" value="素食"><span>素食</span></label>
+                        </div>
+                    </div>
+
+                    <div class="fee-box">
+                        <div class="fee-lines" id="feeLines"></div>
+                        <div class="fee-total"><span>🎄 聖誕費用試算</span><span class="amt" id="feeTotal">580 元</span></div>
+                    </div>
+                </div>
             </div>
 
-            <button type="submit" class="btn-submit">SUBMIT / 送出回覆</button>
+            <div class="form-group">
+                <label for="note">備註說明（選填）</label>
+                <textarea id="note" class="form-control" rows="2" placeholder="如有請假原因或特殊飲食需求請在此註記"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">SUBMIT / 送出回覆</button>
+            <div class="footer-note">兩個活動會分別登記，送出一次即可</div>
         </form>
     </div>
 
 </div>
 
-<iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="close-tip">點任意處關閉</div>
+    <img id="lightboxImg" src="" alt="放大檢視">
+</div>
+
+<div id="sendFrames"></div>
 
 <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIROJRbnPFcqWam0aclRHGhNG5TtGhsrsFu03UMVo1MgZi_crYawv5DD3wJMdU5LR9jg/exec';
+
+    // 依日期排序
+    const EVENTS = [
+        { key: 'b', name: '2026洲美河濱單車日（12/06）' },
+        { key: 'x', name: '2026洲美聖誕聯歡活動（12/19）' }
+    ];
+
+    const PRICE_MEMBER = 580;   // 社友、寶尊眷、小扶輪
+    const PRICE_GUEST = 1180;   // 來賓
+
+    function $(id) { return document.getElementById(id); }
+    function radioVal(name) {
+        const el = document.querySelector('input[name="' + name + '"]:checked');
+        return el ? el.value : '';
+    }
+    function fmt(n) { return n.toLocaleString('en-US'); }
+
     function toggleTransportInfo() {
-        const content = document.getElementById('transContent');
-        const arrow = document.getElementById('transArrow');
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-            arrow.innerHTML = '▼';
-        } else {
-            content.style.display = 'block';
-            arrow.innerHTML = '▲';
-        }
+        const content = $('transContent');
+        const open = content.style.display === 'block';
+        content.style.display = open ? 'none' : 'block';
+        $('transArrow').innerHTML = open ? '▼' : '▲';
     }
 
-    function toggleAttendForm(isAttending) {
-        const attendBox = document.getElementById('attendDetailsBox');
-        attendBox.style.display = isAttending ? 'block' : 'none';
+    function openLightbox(src) {
+        $('lightboxImg').src = src;
+        $('lightbox').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        $('lightbox').style.display = 'none';
+        document.body.style.overflow = '';
     }
 
-    function toggleSpouseInput(show) {
-        const box = document.getElementById('spouseBox');
-        box.style.display = show ? 'block' : 'none';
-        if(!show) document.getElementById('spouseName').value = '';
+    function toggleDetails(k) {
+        const attending = radioVal(k + '_status') === '出席';
+        $(k + '_details').style.display = attending ? 'block' : 'none';
+        // 請假時，動態欄位不必填
+        $(k + '_details').querySelectorAll('input[type="text"]').forEach(function (el) {
+            el.disabled = !attending;
+        });
+        calcFee();
     }
 
-    function generateKidFields() {
-        const count = parseInt(document.getElementById('kidCount').value);
-        const container = document.getElementById('kidsContainer');
-        container.innerHTML = '';
+    function toggleSpouse(k) {
+        const show = radioVal(k + '_hasSpouse') === 'yes';
+        $(k + '_spouseBox').style.display = show ? 'block' : 'none';
+        $(k + '_spouseName').required = show;
+        if (!show) $(k + '_spouseName').value = '';
+        calcFee();
+    }
 
+    function genFields(k, type) {
+        const count = parseInt($(k + '_' + type + 'Count').value, 10);
+        const box = $(k + '_' + type + 'Box');
+        box.innerHTML = '';
         if (count > 0) {
-            container.style.display = 'block';
+            box.style.display = 'block';
             for (let i = 1; i <= count; i++) {
                 const div = document.createElement('div');
                 div.className = 'dynamic-item';
-                div.innerHTML = `
-                    <label>小扶輪 ${i} 姓名與身高說明：</label>
-                    <input type="text" name="kidName_${i}" class="form-control" placeholder="例：王小明 (115cm)" required>
-                `;
-                container.appendChild(div);
+                if (type === 'kid') {
+                    div.innerHTML = '<label>小扶輪 ' + i + ' 姓名：</label>' +
+                        '<input type="text" id="' + k + '_kidName_' + i + '" class="form-control" placeholder="例：王小明" required>';
+                } else {
+                    div.innerHTML = '<label>來賓 ' + i + ' 姓名與單位：</label>' +
+                        '<input type="text" id="' + k + '_guestName_' + i + '" class="form-control" placeholder="例：張大衛（XX社／XX公司）" required>';
+                }
+                box.appendChild(div);
             }
         } else {
-            container.style.display = 'none';
+            box.style.display = 'none';
+        }
+        calcFee();
+    }
+
+    function getFee() {
+        const spouse = radioVal('x_hasSpouse') === 'yes' ? 1 : 0;
+        const kids = parseInt($('x_kidCount').value, 10);
+        const guests = parseInt($('x_guestCount').value, 10);
+        const memberCount = 1 + spouse + kids;
+        const total = memberCount * PRICE_MEMBER + guests * PRICE_GUEST;
+        return { spouse: spouse, kids: kids, guests: guests, total: total };
+    }
+
+    function calcFee() {
+        const f = getFee();
+        let lines = '社友本人 1 位 × 580 = 580 元';
+        if (f.spouse) lines += '<br>寶尊眷 1 位 × 580 = 580 元';
+        if (f.kids) lines += '<br>小扶輪 ' + f.kids + ' 位 × 580 = ' + fmt(f.kids * PRICE_MEMBER) + ' 元';
+        if (f.guests) lines += '<br>來賓 ' + f.guests + ' 位 × 1,180 = ' + fmt(f.guests * PRICE_GUEST) + ' 元';
+        $('feeLines').innerHTML = lines;
+        $('feeTotal').textContent = fmt(f.total) + ' 元';
+    }
+
+    // 組出單一活動的送出資料（欄位名稱與中秋版相同，後端不用改）
+    function buildParams(ev) {
+        const k = ev.key;
+        const status = radioVal(k + '_status');
+        const p = new URLSearchParams();
+        p.append('events', ev.name);
+        p.append('attendStatus', status);
+        p.append('rotaryName', $('rotaryName').value.trim());
+        p.append('nickname', $('nickname').value.trim());
+
+        let prefix = '';
+        if (status === '出席') {
+            const hasSpouse = radioVal(k + '_hasSpouse');
+            p.append('hasSpouse', hasSpouse);
+            p.append('spouseName', hasSpouse === 'yes' ? $(k + '_spouseName').value.trim() : '');
+
+            const kidCount = parseInt($(k + '_kidCount').value, 10);
+            p.append('kidCount', kidCount);
+            for (let i = 1; i <= kidCount; i++) p.append('kidName_' + i, $(k + '_kidName_' + i).value.trim());
+
+            const guestCount = parseInt($(k + '_guestCount').value, 10);
+            p.append('guestCount', guestCount);
+            for (let i = 1; i <= guestCount; i++) p.append('guestName_' + i, $(k + '_guestName_' + i).value.trim());
+
+            p.append('diet', radioVal(k + '_diet'));
+
+            if (k === 'b') prefix = '【' + radioVal('b_bike') + '】';
+            if (k === 'x') prefix = '【費用試算 ' + fmt(getFee().total) + ' 元】';
+        } else {
+            p.append('hasSpouse', 'no');
+            p.append('spouseName', '');
+            p.append('kidCount', 0);
+            p.append('guestCount', 0);
+            p.append('diet', '');
+        }
+
+        const note = $('note').value.trim();
+        p.append('note', (prefix + ' ' + note).trim());
+        return p;
+    }
+
+    function sendOne(params) {
+        return new Promise(function (resolve) {
+            const frame = document.createElement('iframe');
+            frame.style.display = 'none';
+            let done = false;
+            const finish = function () { if (!done) { done = true; resolve(); } };
+            frame.onload = finish;
+            setTimeout(finish, 6000);
+            frame.src = SCRIPT_URL + '?' + params.toString();
+            $('sendFrames').appendChild(frame);
+        });
+    }
+
+    async function submitForm(e) {
+        e.preventDefault();
+        const btn = $('submitBtn');
+        btn.disabled = true;
+        btn.textContent = '送出中…';
+
+        try {
+            for (const ev of EVENTS) {
+                await sendOne(buildParams(ev));
+            }
+            const xGoing = radioVal('x_status') === '出席';
+            alert('謝謝您的回覆！🎄\n' +
+                (xGoing ? '聖誕活動費用試算：' + fmt(getFee().total) + ' 元\n' : '') +
+                '期待 12 月與您相見！');
+            resetForm();
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'SUBMIT / 送出回覆';
+            setTimeout(function () { $('sendFrames').innerHTML = ''; }, 3000);
         }
     }
 
-    function generateGuestFields() {
-        const count = parseInt(document.getElementById('guestCount').value);
-        const container = document.getElementById('guestsContainer');
-        container.innerHTML = '';
-
-        if (count > 0) {
-            container.style.display = 'block';
-            for (let i = 1; i <= count; i++) {
-                const div = document.createElement('div');
-                div.className = 'dynamic-item';
-                div.innerHTML = `
-                    <label>來賓 ${i} 姓名與單位：</label>
-                    <input type="text" name="guestName_${i}" class="form-control" placeholder="例：張大衛 (XX社 / XX公司)" required>
-                `;
-                container.appendChild(div);
-            }
-        } else {
-            container.style.display = 'none';
-        }
+    function resetForm() {
+        $('decForm').reset();
+        ['b', 'x'].forEach(function (k) {
+            $(k + '_details').style.display = 'none';
+            $(k + '_spouseBox').style.display = 'none';
+            $(k + '_kidBox').innerHTML = ''; $(k + '_kidBox').style.display = 'none';
+            $(k + '_guestBox').innerHTML = ''; $(k + '_guestBox').style.display = 'none';
+            $(k + '_spouseName').required = false;
+        });
+        calcFee();
     }
 
-    function showSuccessAlert(e) {
-        setTimeout(function() {
-            alert('謝謝您的報名! 記得準時出席，一起烤肉趣 🎉');
-            document.getElementById('moonFestivalForm').reset();
-            document.getElementById('spouseBox').style.display = 'none';
-            document.getElementById('kidsContainer').style.display = 'none';
-            document.getElementById('guestsContainer').style.display = 'none';
-            toggleAttendForm(true);
-        }, 500);
-    }
+    calcFee();
 </script>
 
 </body>
